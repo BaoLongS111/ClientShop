@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">ClientShop</string>
+    <string name="app_name">云商城</string>
+
+    <!--版权文本-->
+    <!--%1表示第一个变量，%2就表示第二个变量。$d表示int类型，$s就是string，$f就是float-->
+    <string name="copyright" translatable="false">Copyright © %1$d Ixuea. All Rights Reserved</string>
 </resources>
