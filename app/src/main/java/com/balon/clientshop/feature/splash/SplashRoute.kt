@@ -1,7 +1,9 @@
+import android.content.res.Configuration
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -14,7 +16,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.balon.clientshop.R
-import com.balon.clientshop.ui.theme.ClientShopTheme
+import com.balon.clientshop.core.design.theme.ClientShopTheme
 import com.balon.clientshop.util.MyDateUtil
 
 /**
@@ -58,7 +60,7 @@ fun SplashScreen() {
             text = stringResource(R.string.copyright, MyDateUtil.currentYear()),
             style = TextStyle(
                 fontSize = 12.sp,
-                color = Color.Gray
+                color = MaterialTheme.colorScheme.outline
             ),
             modifier = Modifier
                 .padding(bottom = 20.dp)
@@ -68,7 +70,7 @@ fun SplashScreen() {
     }
 }
 
-@Preview(showBackground = true)
+@Preview(showBackground = true, uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
 fun SplashRoutePreview() {
     ClientShopTheme() {

@@ -1,4 +1,4 @@
-package com.balon.clientshop.ui.theme
+package com.balon.clientshop.core.design.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
