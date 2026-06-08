@@ -57,8 +57,7 @@ fun SplashScreen() {
         // 版权文本
         Text(
             text = stringResource(R.string.copyright, MyDateUtil.currentYear()),
-            style = TextStyle(
-                fontSize = 12.sp,
+            style = MaterialTheme.typography.bodySmall.copy(
                 color = MaterialTheme.colorScheme.outline
             ),
             modifier = Modifier
