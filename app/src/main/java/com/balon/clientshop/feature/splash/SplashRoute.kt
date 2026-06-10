@@ -28,7 +28,8 @@ import com.balon.clientshop.util.MyDateUtil
  */
 @Composable
 fun SplashRoute(
-    toGuide: () -> Unit
+    toGuide: () -> Unit,
+    toMain:()-> Unit
 ) {
     val splashViewModel: SplashViewModel = viewModel()
     val leftTime by splashViewModel.timeLeft.collectAsState()
@@ -38,6 +39,7 @@ fun SplashRoute(
         leftTime = leftTime,
         isNavigateToGuide = isNavigateToGuide,
         toGuide = toGuide,
+        toMain = toMain,
         onSkipClick = splashViewModel::onSkipClick
     )
 }
@@ -45,6 +47,7 @@ fun SplashRoute(
 @Composable
 fun SplashScreen(
     toGuide: () -> Unit = {},
+    toMain:()->Unit = {},
     leftTime: Long = 0L,
     isNavigateToGuide: Boolean = false,
     onSkipClick: () -> Unit = {}
@@ -90,8 +93,8 @@ fun SplashScreen(
         Button(
             onClick = onSkipClick,
             modifier = Modifier
-                .padding(bottom = 80.dp)
-                .align(Alignment.BottomCenter)
+                .padding(top = 30.dp, end = 16.dp)
+                .align(Alignment.TopEnd)
         ) {
             Text(text = "跳过$leftTime")
         }
@@ -101,7 +104,8 @@ fun SplashScreen(
 
     if (isNavigateToGuide) {
         LaunchedEffect(key1 = isNavigateToGuide) {
-            toGuide()
+//            toGuide()
+            toMain()
         }
     }
 }

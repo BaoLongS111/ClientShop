@@ -2,7 +2,6 @@ package com.balon.clientshop.feature.guide.navigation
 
 import androidx.navigation.NavController
 import androidx.navigation.NavGraphBuilder
-import androidx.navigation.compose.composable
 import com.balon.clientshop.feature.guide.GuideRoute
 import com.balon.clientshop.feature.splash.navigation.SPLASH_ROUTE
 import com.balon.clientshop.ui.navigation.myComposable

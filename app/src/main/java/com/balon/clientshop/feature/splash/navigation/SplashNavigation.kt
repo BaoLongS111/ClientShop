@@ -18,11 +18,13 @@ fun NavController.navigateToSplash() {
  * Splash页面
  */
 fun NavGraphBuilder.splashScreen(
-    toGuide: () -> Unit
+    toGuide: () -> Unit,
+    toMain:()-> Unit
 ) {
     myComposable(SPLASH_ROUTE) {
         SplashRoute(
-            toGuide = toGuide
+            toGuide = toGuide,
+            toMain = toMain,
         )
     }
 }
