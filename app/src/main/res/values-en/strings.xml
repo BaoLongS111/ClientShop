@@ -538,4 +538,6 @@
     <string name="user_agreement_privacy_policy">《Privacy Policy》</string>
 
     <string name="current_version">Version</string>
+    <string name="function_introduction">function introduction</string>
+    <string name="icon">icon</string>
 </resources>

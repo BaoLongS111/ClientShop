@@ -6,6 +6,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -20,6 +24,11 @@ fun MainRoute() {
 @Composable
 fun MainScreen(
 ) {
+
+    var currentDestination by remember{
+        mutableStateOf(TopLevelDestination.CATEGORY.route)
+    }
+
     Column(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -28,7 +37,11 @@ fun MainScreen(
                 .weight(1f)
         )
         MyNavigationBar(
-            modifier = Modifier.height(56.dp)
+            destinations = TopLevelDestination.entries,
+            onNavigateToDestination = { it->
+                currentDestination = TopLevelDestination.entries[it].route
+            },
+            currentDestination = currentDestination
         )
     }
 
