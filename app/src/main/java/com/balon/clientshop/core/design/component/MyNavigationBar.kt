@@ -22,6 +22,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.balon.clientshop.core.design.theme.MyAppTheme
 import com.balon.clientshop.feature.main.navigation.TopLevelDestination
+import com.quick.app.core.design.theme.SpaceExtraMedium
 
 @Composable
 fun MyNavigationBar(
@@ -50,7 +51,7 @@ fun MyNavigationBar(
                     .clickable {
                         onNavigateToDestination(index)
                     }
-                    .padding(7.dp),
+                    .padding( vertical = SpaceExtraMedium),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Image(
